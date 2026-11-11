@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Essai pingouin</title>
+<style>html,body{margin:0;height:100%;background:#1cb3e8;overflow:hidden;font:700 14px Figtree,Arial,sans-serif}canvas{display:block}
+#n{position:absolute;left:12px;top:10px;color:#fff;letter-spacing:.08em;text-transform:uppercase}</style></head>
+<body><div id="n"></div>
+<script type="module">
+import * as THREE from './assets/vendor/three.module.min.js';
+import { creerPingouin, POSES } from './assets/js/pingouin.js';
+const q = new URLSearchParams(location.search), pose = q.get('pose') || 'coucou', t0 = +(q.get('t') || 0.4);
+document.getElementById('n').textContent = pose;
+document.body.style.background = q.get('fond') || '#1cb3e8';
+const r = new THREE.WebGLRenderer({ antialias: true, alpha: true }); r.setPixelRatio(devicePixelRatio); r.setSize(innerWidth, innerHeight); document.body.appendChild(r.domElement);
+const sc = new THREE.Scene();
+const cam = new THREE.PerspectiveCamera(30, innerWidth / innerHeight, .1, 100); cam.position.set(0, 1.6, 9); cam.lookAt(0, 1.1, 0);
+sc.add(new THREE.HemisphereLight(0xffffff, 0x9fdcff, 1.6)); const d = new THREE.DirectionalLight(0xffffff, 2.2); d.position.set(3, 6, 5); sc.add(d);
+const p = creerPingouin(); sc.add(p.racine); p.appliquer({ ...POSES[pose], billets: pose === 'billets' ? .75 : POSES[pose].billets });
+p.racine.rotation.y = +(q.get('ry') || (pose === 'glisse' ? .9 : -.25));
+const boucle = t => { p.animer(t0 + t / 1000); r.render(sc, cam); requestAnimationFrame(boucle); }; requestAnimationFrame(boucle);
+</script></body></html>

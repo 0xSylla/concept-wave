@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wave — Ça glisse.</title>
+<meta name="description" content="Wave, votre allié mobile money : dépôt et retrait gratuits, factures sans frais, transferts pour 1 %. Concept de site non officiel.">
+<meta name="theme-color" content="#1cb3e8">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/wave.css?v=3">
+</head>
+<body>
+<a class="saut" href="#contenu" data-i="saut">Aller au contenu</a>
+
+<header class="top" id="top">
+  <a class="top__logo" href="./" aria-label="Wave, accueil"><img src="assets/img/logo-wave.png" alt="Wave" width="140" height="48"></a>
+  <nav class="top__nav" id="menu" aria-label="Navigation principale">
+    <a href="#envoyer" data-i="nav1">Envoyer</a>
+    <a href="#gratuit" data-i="nav2">Gratuit</a>
+    <a href="#payer" data-i="nav3">Payer</a>
+    <a href="#agents" data-i="nav4">Agents</a>
+    <a href="#securite" data-i="nav5">Sécurité</a>
+  </nav>
+  <div class="top__outils">
+    <div class="bascule" role="group" aria-label="Pays" data-i-aria="pays">
+      <button type="button" data-pays="sn" aria-pressed="true">SN</button>
+      <button type="button" data-pays="ci" aria-pressed="false">CI</button>
+    </div>
+    <div class="bascule bascule--fine" role="group" aria-label="Langue" data-i-aria="langue">
+      <button type="button" data-lang="fr" aria-pressed="true">FR</button>
+      <button type="button" data-lang="en" aria-pressed="false">EN</button>
+    </div>
+    <a class="btn btn--nuit top__cta js-store" href="#fin" data-i="cta">Télécharger</a>
+    <button class="top__burger" id="burger" type="button" aria-expanded="false" aria-controls="menu" aria-label="Ouvrir le menu" data-i-aria="burger"><span></span><span></span></button>
+  </div>
+</header>
+
+<main id="contenu">
+
+<!-- 1. HÉROS : l'envoi glisse d'un téléphone à l'autre -->
+<section class="hero" id="hero" aria-labelledby="hero-titre">
+  <p class="hero__geant" aria-hidden="true">wave</p>
+  <div class="hero__stick">
+    <div class="hero__txt">
+      <p class="kicker"><span class="kicker__point"></span><span id="h-kicker">Wave · Sénégal</span></p>
+      <h1 class="hero__titre" id="hero-titre" data-i="h1">Ça glisse.</h1>
+      <p class="hero__sous" data-i="hsous">Votre allié mobile money. Déposez et retirez gratuitement, payez vos factures sans frais, envoyez de l'argent pour <b>1&nbsp;%</b>.</p>
+      <div class="stores">
+        <a class="store js-store-play" href="https://play.google.com/store/apps/details?id=com.wave.personal" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 2.5v19l10.2-9.5zM15.6 13.3 6.2 22l12.3-7zm0-2.6L6.2 2l12.3 7zm1.5 1.3 3.3-1.9a1 1 0 0 1 0 1.8L17.1 13.8z" fill="currentColor"/></svg><span><small data-i="play1">Disponible sur</small>Google Play</span></a>
+        <a class="store js-store-ios" href="https://apps.apple.com/sn/app/wave-mobile-money/id1523884528" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.4 12.6c0-2.4 2-3.6 2.1-3.7-1.2-1.7-3-1.9-3.6-2-1.5-.2-3 .9-3.8.9-.8 0-2-.9-3.3-.9-1.7 0-3.3 1-4.2 2.5-1.8 3.1-.5 7.7 1.3 10.2.9 1.2 1.9 2.6 3.2 2.6 1.3-.1 1.8-.8 3.3-.8 1.6 0 2 .8 3.4.8 1.4 0 2.3-1.3 3.1-2.5 1-1.4 1.4-2.8 1.4-2.9-.1 0-2.9-1.1-2.9-4.2zM13.9 5.1c.7-.9 1.2-2 1-3.1-1 0-2.2.7-2.9 1.5-.6.7-1.2 1.9-1 3 1.1.1 2.2-.6 2.9-1.4z" fill="currentColor"/></svg><span><small data-i="ios1">Télécharger dans</small>l'App Store</span></a>
+      </div>
+    </div>
+
+    <div class="hero__place" aria-hidden="true"><div class="hero__halo"></div><div class="p-place" data-pingouin="coucou" data-ry="-0.35"></div></div>
+    <p class="defile" data-i="defile">Fais défiler</p>
+  </div>
+</section>
+
+<!-- 2. CALCULATEUR -->
+<section class="calc" id="envoyer" aria-labelledby="calc-titre">
+  <div class="enveloppe calc__grille">
+    <div>
+      <p class="etiq" data-i="c-etiq">Envoyer de l'argent</p>
+      <h2 class="titre" id="calc-titre" data-i="c-titre">Combien tu envoies&nbsp;?</h2>
+      <p class="chapo" data-i="c-chapo">Glisse le curseur. Les frais s'affichent tout de suite&nbsp;: 1&nbsp;%, rien de caché.</p>
+      <div class="calc__puces" role="group" aria-label="Montants rapides" data-i-aria="c-puces">
+        <button type="button" data-m="5000">5 000 F</button>
+        <button type="button" data-m="25000">25 000 F</button>
+        <button type="button" data-m="100000">100 000 F</button>
+        <button type="button" data-m="300000">300 000 F</button>
+      </div>
+      <div class="p-place p-calc" data-pingouin="billets" data-ry="0.35" aria-hidden="true"></div>
+    </div>
+    <div class="calc__carte">
+      <label class="calc__label" for="c-montant" data-i="c-label">Montant envoyé</label>
+      <output class="calc__montant" id="c-sortie" for="c-montant">25 000 F</output>
+      <input class="calc__curseur" id="c-montant" type="range" min="1000" max="500000" step="500" value="25000">
+      <dl class="calc__detail">
+        <div><dt data-i="c-frais">Frais Wave (1&nbsp;%)</dt><dd id="c-frais">250 F</dd></div>
+        <div><dt data-i="c-recu">Ton proche reçoit</dt><dd id="c-recu">25 000 F</dd></div>
+        <div class="calc__total"><dt data-i="c-total">Débité de ton compte</dt><dd id="c-total">25 250 F</dd></div>
+      </dl>
+      <p class="calc__retrait" data-i="c-retrait">Et quand il retire&nbsp;: <b>0&nbsp;F</b>.</p>
+      <p class="note" data-i="c-note">Calcul indicatif à 1&nbsp;%, le tarif affiché par Wave. Le montant exact s'affiche dans l'appli avant de valider.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 3. GRATUIT : un zéro qui reste, trois scènes qui passent -->
+<section class="gratuit" id="gratuit" aria-labelledby="gratuit-titre">
+  <div class="gratuit__stick">
+    <p class="etiq etiq--clair" data-i="g-etiq">Sans frais</p>
+    <div class="gratuit__zone"><h2 class="gratuit__zero" id="gratuit-titre"><span>0</span>&nbsp;F</h2>
+      <div class="p-place p-zero-a" data-pingouin="glisse" data-ry="1.35" data-k="0.08" data-tenir="0" aria-hidden="true"></div>
+      <div class="p-place p-zero-b" data-pingouin="glisse" data-ry="1.35" data-k="0.92" data-tenir="0" aria-hidden="true"></div></div>
+    <p class="gratuit__mot" id="g-mot" aria-live="polite">pour déposer</p>
+  </div>
+  <div class="gratuit__scenes">
+    <article class="scene-g" data-mot="pour déposer" data-mot-en="to deposit">
+      <div class="scene-g__ill" aria-hidden="true">
+        <svg viewBox="0 0 200 160"><rect x="30" y="40" width="140" height="96" rx="10" fill="#1cb3e8"/><rect x="22" y="28" width="156" height="22" rx="6" fill="#12125c"/><text x="100" y="44" class="ill-txt">AGENT</text><rect x="60" y="70" width="80" height="44" rx="6" fill="#fff"/><g class="ill-billets"><rect x="74" y="80" width="52" height="26" rx="4" fill="#2fd27a"/><rect x="80" y="74" width="52" height="26" rx="4" fill="#5fe39a"/></g></svg>
+      </div>
+      <h3 data-i="g1t">Déposer</h3>
+      <p data-i="g1p">Tu passes chez un agent, tu donnes ton argent, il arrive sur ton compte. Gratuit.</p>
+    </article>
+    <article class="scene-g" data-mot="pour retirer" data-mot-en="to withdraw">
+      <div class="scene-g__ill" aria-hidden="true">
+        <svg viewBox="0 0 200 160"><rect x="62" y="16" width="76" height="128" rx="14" fill="#12125c"/><rect x="68" y="24" width="64" height="104" rx="9" fill="#4b4ed6"/><text x="100" y="62" class="ill-txt">−10 000</text><g class="ill-sortie"><rect x="120" y="86" width="56" height="28" rx="4" fill="#2fd27a"/><rect x="128" y="96" width="56" height="28" rx="4" fill="#5fe39a"/></g></svg>
+      </div>
+      <h3 data-i="g2t">Retirer</h3>
+      <p data-i="g2p">Ton proche retire chez l'agent du quartier. Ce que tu as envoyé, il le touche en entier.</p>
+    </article>
+    <article class="scene-g" data-mot="pour tes factures" data-mot-en="for your bills">
+      <div class="scene-g__ill scene-g__ill--factures" aria-hidden="true">
+        <div class="facture"><span class="facture__nom" id="f1">Senelec</span><span class="facture__tampon">0 F</span></div>
+        <div class="facture"><span class="facture__nom" id="f2">Woyofal</span><span class="facture__tampon">0 F</span></div>
+      </div>
+      <h3 data-i="g3t">Payer tes factures</h3>
+      <p id="g3p">Électricité, crédit Woyofal&nbsp;: tu paies depuis ton téléphone, sans faire la queue et sans frais.</p>
+    </article>
+  </div>
+</section>
+
+<!-- 4. PAYER : le QR -->
+<section class="payer" id="payer" aria-labelledby="payer-titre">
+  <div class="payer__stick">
+    <div class="payer__txt">
+      <p class="etiq" data-i="p-etiq">Payer chez un marchand</p>
+      <h2 class="titre" id="payer-titre" data-i="p-titre">Tu scannes.<br>C'est payé.</h2>
+      <ol class="payer__etapes">
+        <li data-pas="0" data-i="p1">Le marchand affiche son QR Wave.</li>
+        <li data-pas="1" data-i="p2">Tu le scannes avec l'appli.</li>
+        <li data-pas="2" data-i="p3">Tu tapes le montant. Payé.</li>
+      </ol>
+      <p class="payer__bonus" data-i="p-credit">Et ton crédit téléphone, tous réseaux, s'achète en deux secondes.</p>
+      <a class="lien" href="https://www.wave.com/fr/business/" target="_blank" rel="noopener" data-i="p-biz">Vous êtes commerçant&nbsp;? Wave Business →</a>
+    </div>
+    <div class="payer__tel" aria-hidden="true">
+      <div class="p-place p-payer" data-pingouin="qr" data-ry="0.45" data-k="0.74"></div>
+      <div class="mobile">
+        <div class="mobile__ecran">
+          <div class="mobile__haut"><span id="p-heure">9:41</span><span>●●●</span></div>
+          <p class="mobile__solde" id="p-solde">34 900 F</p>
+          <div class="mobile__qr">
+            <svg viewBox="0 0 29 29" class="qr" id="qr"></svg>
+            <span class="mobile__scan"></span>
+          </div>
+          <div class="mobile__ok">
+            <span class="mobile__coche">✓</span>
+            <b id="p-marchand">Dibiterie Chez Fatou</b>
+            <span>2 500 F</span>
+            <small data-i="p-ex">Exemple</small>
+          </div>
+          <ul class="mobile__liste" id="p-liste"></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 5. AGENTS -->
+<section class="agents" id="agents" aria-labelledby="agents-titre">
+  <div class="enveloppe agents__grille">
+    <div>
+      <p class="etiq" data-i="a-etiq">Les agents</p>
+      <h2 class="titre" id="agents-titre" data-i="a-titre">Il y en a un au coin de ta rue.</h2>
+      <p class="chapo" id="a-chapo">Pour déposer ou retirer, tu vas chez un agent Wave. À Dakar, ils sont partout&nbsp;: au marché, à l'arrêt de bus, à côté de la boutique.</p>
+      <p class="note" data-i="a-note">Carte et points illustratifs, pour la maquette.</p>
+    </div>
+    <figure class="carte" id="carte" aria-label="Carte illustrative des agents">
+      <svg viewBox="0 0 400 320" id="carte-svg"></svg>
+      <div class="p-place p-agents" id="p-agents" data-pingouin="marche" data-ry="0" aria-hidden="true"></div>
+      <figcaption class="carte__bulle" id="carte-bulle">Agent le plus proche : 3 min à pied</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- 6. SÉCURITÉ -->
+<section class="secu" id="securite" aria-labelledby="secu-titre">
+  <div class="enveloppe">
+    <p class="etiq" data-i="s-etiq">Sécurité</p>
+    <div class="secu__tete"><h2 class="titre" id="secu-titre" data-i="s-titre">Ton argent est bien gardé.</h2>
+    <div class="p-place p-secu" data-pingouin="gardien" data-ry="-0.3" aria-hidden="true"></div></div>
+    <div class="secu__grille">
+      <article class="tuile"><span class="tuile__ic" aria-hidden="true">☎</span><h3 data-i="s1t">Un seul numéro, gratuit</h3><p data-i="s1p">Un problème&nbsp;? Un numéro de contact unique et gratuit, indiqué dans l'appli.</p></article>
+      <article class="tuile"><span class="tuile__ic" aria-hidden="true">◈</span><h3 data-i="s2t">Une sécurité de niveau international</h3><p data-i="s2p">Un système de sécurité aux standards internationaux protège ton compte.</p></article>
+      <article class="tuile tuile--conseil"><span class="tuile__ic" aria-hidden="true">!</span><h3 data-i="s3t">Ton code reste à toi</h3><p data-i="s3p">Ne donne jamais ton code secret, à personne, même à quelqu'un qui dit appeler de la part de Wave.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- 7. AVIS -->
+<section class="avis" aria-labelledby="avis-titre">
+  <div class="enveloppe">
+    <h2 class="titre" id="avis-titre" data-i="v-titre">Ils l'utilisent déjà.</h2>
+    <div class="avis__grille">
+      <figure class="avis__carte avis__carte--a">
+        <blockquote data-i="v1">«&nbsp;Je recharge mon Woyofal avec Wave. C'est simple, facile et efficace, tu peux tout faire avec sans te déplacer.&nbsp;»</blockquote>
+        <figcaption><span class="avis__ini" aria-hidden="true">A</span>Aïta</figcaption>
+      </figure>
+      <figure class="avis__carte avis__carte--b">
+        <div class="p-place p-avis" data-pingouin="debout" data-ry="-0.2" aria-hidden="true"></div>
+        <blockquote data-i="v2">«&nbsp;Maintenant, je n'utilise que Wave pour envoyer de l'argent à ma famille.&nbsp;»</blockquote>
+        <figcaption><span class="avis__ini" aria-hidden="true">F</span>Firmin</figcaption>
+      </figure>
+    </div>
+    <p class="note" data-i="v-note">Témoignages repris de wave.com.</p>
+  </div>
+</section>
+
+<!-- 8. FIN -->
+<section class="fin" id="fin" aria-labelledby="fin-titre">
+  <svg class="fin__vague" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true"><path d="M0 60 C 240 0, 480 120, 720 60 S 1200 0, 1440 60 V120 H0 Z" fill="currentColor"/></svg>
+  <div class="enveloppe fin__in">
+    <div class="p-place p-fin" data-pingouin="coucou" data-ry="0.2" aria-hidden="true"></div>
+    <h2 class="fin__titre" id="fin-titre" data-i="f-titre">Ça glisse.</h2>
+    <p class="chapo chapo--clair" data-i="f-chapo">Télécharge l'appli. Le reste, ça glisse tout seul.</p>
+    <div class="stores stores--centre">
+      <a class="store js-store-play" href="https://play.google.com/store/apps/details?id=com.wave.personal" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 2.5v19l10.2-9.5zM15.6 13.3 6.2 22l12.3-7zm0-2.6L6.2 2l12.3 7zm1.5 1.3 3.3-1.9a1 1 0 0 1 0 1.8L17.1 13.8z" fill="currentColor"/></svg><span><small data-i="play1">Disponible sur</small>Google Play</span></a>
+      <a class="store js-store-ios" href="https://apps.apple.com/sn/app/wave-mobile-money/id1523884528" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.4 12.6c0-2.4 2-3.6 2.1-3.7-1.2-1.7-3-1.9-3.6-2-1.5-.2-3 .9-3.8.9-.8 0-2-.9-3.3-.9-1.7 0-3.3 1-4.2 2.5-1.8 3.1-.5 7.7 1.3 10.2.9 1.2 1.9 2.6 3.2 2.6 1.3-.1 1.8-.8 3.3-.8 1.6 0 2 .8 3.4.8 1.4 0 2.3-1.3 3.1-2.5 1-1.4 1.4-2.8 1.4-2.9-.1 0-2.9-1.1-2.9-4.2zM13.9 5.1c.7-.9 1.2-2 1-3.1-1 0-2.2.7-2.9 1.5-.6.7-1.2 1.9-1 3 1.1.1 2.2-.6 2.9-1.4z" fill="currentColor"/></svg><span><small data-i="ios1">Télécharger dans</small>l'App Store</span></a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="pied">
+  <div class="enveloppe pied__in">
+    <img src="assets/img/logo-wave.png" alt="Wave" width="112" height="38">
+    <p data-i="pied">Projet non officiel. Tarifs repris de wave.com, calculs indicatifs. Wave est une marque de Wave Mobile Money Inc.</p>
+  </div>
+</footer>
+
+<canvas class="calque3d" id="calque3d" aria-hidden="true"></canvas>
+<script src="assets/js/wave.js?v=3"></script>
+<script type="module" src="assets/js/scene3d.js?v=2"></script>
+</body>
+</html>
